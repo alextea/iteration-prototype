@@ -49,4 +49,10 @@ router.post('/form/:name', function (req, res) {
   res.redirect('/'+req.params.name);
 });
 
+router.get('/summary-page', function (req, res) {
+  res.locals.session = req.session;
+  res.render('summary-page');
+});
+
+
 module.exports = router;

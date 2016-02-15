@@ -32,7 +32,7 @@
           Full name
         </td>
         <td>
-          Bob Smith
+          {{ session['full-name'] }}
         </td>
         <td class="change-answer">
           <a href="#">
@@ -45,7 +45,7 @@
           National Insurance number
         </td>
         <td>
-          VO 12 34 56 D
+          {{ session['ni-number'] }}
         </td>
         <td class="change-answer">
           <a href="#">
@@ -58,7 +58,7 @@
           Date of birth
         </td>
         <td>
-          28 December 1980
+          {{ session['dob-day'] }} {{ session['dob-month'] }} {{ session['dob-year'] }}
         </td>
         <td class="change-answer">
           <a href="#">
