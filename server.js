@@ -9,6 +9,7 @@ var path = require('path'),
     config = require(__dirname + '/app/config.js'),
     port = (process.env.PORT || config.port),
     utils = require(__dirname + '/lib/utils.js'),
+    session = require('express-session'),
 
 // Grab environment variables specified in Procfile or as Heroku config vars
     username = process.env.USERNAME,
@@ -24,6 +25,12 @@ var path = require('path'),
 if (env === 'production' && useAuth === 'true'){
     app.use(utils.basicAuth(username, password));
 }
+
+app.use(session({
+    secret: 'cookie_secret',
+    resave: true,
+    saveUninitialized: true
+}));
 
 // Application settings
 app.set('view engine', 'html');
