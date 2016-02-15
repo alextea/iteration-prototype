@@ -41,4 +41,12 @@ router.get('/examples/over-18', function (req, res) {
 
 // add your routes here
 
+router.post('/form/:name', function (req, res) {
+  for (var prop in req.body) {
+    req.session[prop] = req.body[prop];
+  };
+
+  res.redirect('/'+req.params.name);
+});
+
 module.exports = router;
