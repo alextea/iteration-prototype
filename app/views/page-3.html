@@ -8,7 +8,7 @@
 <main id="content" role="main">
   <div class="grid-row">
     <div class="column-two-thirds">
-      <form action="/" method="post" class="form"> 
+      <form action="form/summary-page" method="post" class="form"> 
 
         <h1 class="heading-large">
           Your date of birth
@@ -25,17 +25,17 @@
 
               <div class="form-group form-group-day">
                 <label for="dob-day">Day</label>
-                <input class="form-control" id="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+                <input class="form-control" id="dob-day" type="number" pattern="[0-9]*" min="0" max="31" name="dob-day">
               </div>
 
               <div class="form-group form-group-month">
                 <label for="dob-month">Month</label>
-                <input class="form-control" id="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+                <input class="form-control" id="dob-month" type="number" pattern="[0-9]*" min="0" max="12" name="dob-month">
               </div>
 
               <div class="form-group form-group-year">
                 <label for="dob-year">Year</label>
-                <input class="form-control" id="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
+                <input class="form-control" id="dob-year" type="number" pattern="[0-9]*" min="0" max="2014" name="dob-year">
               </div>
             </div>
 
@@ -57,7 +57,7 @@
         </div>
 
         <div class="form-group">
-          <a href="summary-page" class="button">Continue</a>
+          <input type="submit" class="button" value="Continue">
         </div>
 
       </form>
