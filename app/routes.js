@@ -51,6 +51,8 @@ router.post('/form/:name', function (req, res) {
 
 router.get('/summary-page', function (req, res) {
   res.locals.session = req.session;
+  var monthArray = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  res.locals.session['dob-month'] = monthArray[req.session['dob-month'] - 1];
   res.render('summary-page');
 });
 
